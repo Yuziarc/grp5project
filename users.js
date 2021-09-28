@@ -66,6 +66,20 @@ router.get("/user/fn", (request, response) => {
   );
 });
 
+router.get("/user/by-email", (request, response) => {
+  
+  database.connection.query(
+   `select * from users where email = '${request.query.email}'`,
+    (errors, records) => {
+      if (errors) {
+      console.log(errors);
+      response.status(500).send("An error occurred in the backend");
+    } else {
+      response.status(200).send(records);
+    }
+    }
+  );
+});
 
 router.post("/user/add", (request, response) => {
   // Step 1: need to get the user object from the request

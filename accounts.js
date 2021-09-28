@@ -40,6 +40,21 @@ router.get("/account/by-aid", (request, response) => {
   );
 });
 
+router.get("/account/by-email", (request, response) => {
+
+  database.connection.query(
+    `select * from accounts as a left join users as u on a.user_id = u.user_id where u.email = '${request.query.email}'`,
+    (errors, records) => {
+      if (errors) {
+        console.log(errors);
+        response.status(500).send("An error occurred in the backend");
+      } else {
+        response.status(200).send(records);
+      }
+    }
+  );
+});
+
 router.post("/account/add", (request, response) => {
  // let account = request.body;
   //data.add_account(account);
