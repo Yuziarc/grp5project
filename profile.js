@@ -9,7 +9,6 @@ const user_email = sessionStorage.getItem("email");
 
 var querryStr = "http://localhost:3000/user/by-email?email=" + user_email;
 
-console.log(querryStr)
 
 function fill_fields(e) {
     $.getJSON(querryStr, mydata);
