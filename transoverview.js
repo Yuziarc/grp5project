@@ -27,8 +27,9 @@ function filltrans(data) {
     data.forEach(function (item) {
         const eachTrans = document.createElement('li');
         const TransType = item.transaction_type.toUpperCase()
+        const TransAmt = item.transaction_amt.toLocaleString();
         eachTrans.innerHTML = `
-        <h5>${item.transaction_amt}</h5> to Account No. ${item.to_account} 
+        <h5>${(TransAmt)}</h5> to Account No. ${item.to_account} 
         <br> <span>${item.transaction_date.slice(0,10)}</span>
         <br> <span>${TransType}</span>
         

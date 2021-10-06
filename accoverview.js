@@ -15,14 +15,17 @@ function mydata(data) {
         bal += Number(item.balance.slice(1,))
         const eachAcc = document.createElement('li');
         const AccType = item.account_type.toUpperCase()
+        let AccAmt = item.balance.slice(1,)
+        AccAmt = AccAmt.toLocaleString()
         eachAcc.innerHTML = `
-        ${AccType} <span> ${item.balance}</span> 
+        ${AccType} <span> ${AccAmt}</span> 
         `;
         
         list.appendChild(eachAcc);
     
     sessionStorage.setItem("aid", data[0].account_id)
-    balance.innerText = "$" + bal
+
+    balance.innerText = "$" + bal.toLocaleString()
     })
 }
 

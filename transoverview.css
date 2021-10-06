@@ -117,7 +117,7 @@ input[type='number'] {
   box-shadow: var(--box-shadow);
   color: #333;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: relative;
   padding: 10px;
   margin: 10px 0;
