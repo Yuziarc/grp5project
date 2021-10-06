@@ -17,10 +17,10 @@ Steps:
 ## 2: Build Container
 
 change into the directory: 
-`cd docker-hello`
+`cd dockerproj`
 
-`docker build . -t myhello`
+`docker build . -t dockerproj`
 
 ## 3: Run Container
 
-`docker run -d -p 8080:8080 myhello`
+`docker run -d -p 8080:8080 dockerproj`

@@ -5,11 +5,11 @@ const dotenv = require("dotenv").config();
 
 // Define properties to be used for mysql connection
 const properties = {
-    host: `${process.env.DBHOST}`,
-    port: process.env.DBPORT,
-    user: `${process.env.DBUSER}`,
-    password: `${process.env.DBPASSWD}`,
-    database: `${process.env.DBNAME}`,
+    host: `137.132.92.94`,
+    port: 12865,
+    user: `fintechlab`,
+    password: `FinTechLab`,
+    database: `b13_group5`,
 };
 
 // Create a connection object which will hold the connection to cloud mysql server.
