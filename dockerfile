@@ -34,5 +34,3 @@ RUN chmod +x /home/user/entrypoint.sh
 RUN useradd -ms /bin/bash user
 WORKDIR /home/user
 ENTRYPOINT ["/entrypoint.sh"]
-
-CMD ["sh","/home/user/start.sh"]
