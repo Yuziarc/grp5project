@@ -24,3 +24,7 @@ change into the directory:
 ## 3: Run Container
 
 `docker run -d -p 8080:8080 dockerproj`
+
+## 4: Git Actions
+
+On push, the git actions are configured to build the project, and further echo a message "Hello", as well as the date and time of the push.
