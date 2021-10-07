@@ -26,10 +26,8 @@ COPY transoverview.css /home/user/transoverview.css
 COPY transoverview.html /home/user/transoverview.html
 COPY transoverview.js /home/user/transoverview.js
 COPY users.js /home/user/users.js
-COPY start.sh /home/user/start.sh
 COPY package.json /home/user/package.json
 COPY entrypoint.sh /home/user/entrypoint.sh
-RUN chmod a+x /home/user/start.sh
 RUN chmod +x /home/user/entrypoint.sh
 RUN useradd -ms /bin/bash user
 WORKDIR /home/user

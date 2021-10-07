@@ -28,3 +28,5 @@ change into the directory:
 ## 4: Git Actions
 
 On push, the git actions are configured to build the project, and further echo a message "Hello", as well as the date and time of the push.
+
+Hopefully, it works. 
